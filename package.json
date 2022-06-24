@@ -1,0 +1,21 @@
+{
+  "name": "altibb-playwright",
+  "version": "1.0.0",
+  "description": "This is TypeScript Playwright automation tests created to test some functionality of the [altibb](https://telnyx.com/) website.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zefirlover/altibb-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zefirlover/altibb-playwright/issues"
+  },
+  "homepage": "https://github.com/zefirlover/altibb-playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.22.2"
+  }
+}
