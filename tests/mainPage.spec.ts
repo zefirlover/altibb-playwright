@@ -8,7 +8,7 @@ test.describe('main page testing', () => {
         await mainPage.visit();
     })
 
-    test('ALT-01 Verify the main page',async ({ page }) => {
+    test('ALT-01 Verify the main page', async ({ page }) => {
         let mainPage = new MainPage(page);
         await expect(mainPage.callDocButton).toBeVisible();
     })
