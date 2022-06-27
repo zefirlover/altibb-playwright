@@ -10,6 +10,8 @@ export class AtrialFibrillationVideoPage {
     readonly appointmentHeader: Locator;
     readonly viewAllQuestionsLink: Locator;
     readonly qnaHeader: Locator;
+    readonly newsArticle: Locator;
+    readonly newsContainer: Locator;
 
     constructor(page: Page) {
         this.page = page
@@ -21,6 +23,8 @@ export class AtrialFibrillationVideoPage {
         this.appointmentHeader = page.locator('h1[class="main-search-header"]');
         this.viewAllQuestionsLink = page.locator('#free-q-and-a-classic-v2 a[href="/اسئلة-طبية/الامراض-المعدية"]');
         this.qnaHeader = page.locator('h1[class="page-title"]');
+        this.newsArticle = page.locator('#suggested-articles-news .article-primary-container');
+        this.newsContainer = page.locator('#suggested-articles-news');
     }
 
     async visit() {

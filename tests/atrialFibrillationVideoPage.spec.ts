@@ -7,7 +7,7 @@ const arrMedias = [ 'facebook', 'linkedin', 'twitter', 'instagram', 'whatsapp' ]
 test.describe('atrial fibrillation video page testing', () => {
     test.beforeEach(async ({ page }) => {
         let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
-        test.setTimeout(60000);
+        test.setTimeout(80000);
         await atrialFibrillationVideoPage.visit();
         await page.waitForLoadState();
     })
@@ -52,7 +52,6 @@ test.describe('atrial fibrillation video page testing', () => {
 
     test('ALT-06 Verify the appointment page', async ({ page }) => {
         let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
-        test.setTimeout(80000);
         await expect(atrialFibrillationVideoPage.appointmentLink).toBeVisible();
         await atrialFibrillationVideoPage.appointmentLink.click();
         await expect(atrialFibrillationVideoPage.appointmentHeader).toBeVisible();
@@ -66,4 +65,10 @@ test.describe('atrial fibrillation video page testing', () => {
         await expect(atrialFibrillationVideoPage.qnaHeader).toBeVisible();
         await expect(atrialFibrillationVideoPage.qnaHeader).toHaveText('أسئلة واجابات طبية الامراض المعدية');
     })
+/*
+    test('ALT-08 Verify news and articles container', async ({ page }) => {
+        let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
+        await expect(atrialFibrillationVideoPage.newsContainer).toBeVisible();
+        if (await page.$$('#suggested-articles-news .article-primary-container').length)
+    })*/
 })
