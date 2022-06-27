@@ -15,7 +15,7 @@ test.describe('atrial fibrillation video page testing', () => {
     test('ALT-03 Verify the atrial fibrillation video page', async ({ page }) => {
         let medicalVideosPage = new MedicalVideosPage(page);
         let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
-        test.setTimeout(60000);
+        test.setTimeout(100000);
         await medicalVideosPage.visit();
         await page.waitForLoadState();
         await expect(medicalVideosPage.heartVideo).toBeVisible();
@@ -48,5 +48,22 @@ test.describe('atrial fibrillation video page testing', () => {
             await atrialFibrillationVideoPage.visit();
             await page.waitForLoadState();
         }
+    })
+
+    test('ALT-06 Verify the appointment page', async ({ page }) => {
+        let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
+        test.setTimeout(80000);
+        await expect(atrialFibrillationVideoPage.appointmentLink).toBeVisible();
+        await atrialFibrillationVideoPage.appointmentLink.click();
+        await expect(atrialFibrillationVideoPage.appointmentHeader).toBeVisible();
+        await expect(atrialFibrillationVideoPage.appointmentHeader).toHaveText(' ابحث عن طبيب واحجز موعد بكل سهولة ');
+    })
+
+    test('ALT-07 Verify the QnA page', async ({ page }) => {
+        let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
+        await expect(atrialFibrillationVideoPage.viewAllQuestionsLink).toBeVisible();
+        await atrialFibrillationVideoPage.viewAllQuestionsLink.click();
+        await expect(atrialFibrillationVideoPage.qnaHeader).toBeVisible();
+        await expect(atrialFibrillationVideoPage.qnaHeader).toHaveText('أسئلة واجابات طبية الامراض المعدية');
     })
 })
