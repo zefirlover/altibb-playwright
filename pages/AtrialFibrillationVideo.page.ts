@@ -12,6 +12,8 @@ export class AtrialFibrillationVideoPage {
     readonly qnaHeader: Locator;
     readonly newsArticle: Locator;
     readonly newsContainer: Locator;
+    readonly videosContainer: Locator;
+    readonly videoArticle: Locator;
 
     constructor(page: Page) {
         this.page = page
@@ -25,6 +27,8 @@ export class AtrialFibrillationVideoPage {
         this.qnaHeader = page.locator('h1[class="page-title"]');
         this.newsArticle = page.locator('#suggested-articles-news .article-primary-container');
         this.newsContainer = page.locator('#suggested-articles-news');
+        this.videosContainer = page.locator('video-container-inner');
+        this.videoArticle = page.locator('article[class="video-box"]');
     }
 
     async visit() {

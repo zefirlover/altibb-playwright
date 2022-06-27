@@ -3,7 +3,7 @@ import { MedicalNewsPage } from '../pages/MedicalNews.page';
 import { Header } from '../pages/header.page';
 
 test.describe('med news test', () => {
-    test('test', async ({ page }) => {
+    test('ALT-09 Verify Talk to doctor page', async ({ page }) => {
         let header = new Header(page);
         let medicalNewsPage = new MedicalNewsPage(page);
         await header.visit();

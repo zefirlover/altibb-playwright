@@ -65,10 +65,19 @@ test.describe('atrial fibrillation video page testing', () => {
         await expect(atrialFibrillationVideoPage.qnaHeader).toBeVisible();
         await expect(atrialFibrillationVideoPage.qnaHeader).toHaveText('أسئلة واجابات طبية الامراض المعدية');
     })
-/*
+
     test('ALT-08 Verify news and articles container', async ({ page }) => {
         let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
         await expect(atrialFibrillationVideoPage.newsContainer).toBeVisible();
-        if (await page.$$('#suggested-articles-news .article-primary-container').length)
-    })*/
+        let arrNewsArticles = await page.$$('#suggested-articles-news .article-primary-container');
+        for (let i = 0; i < arrNewsArticles.length; i++)
+            await expect(atrialFibrillationVideoPage.newsArticle.nth(i)).toBeVisible();
+    })
+
+    test('ALT-10 Verify Video articles container', async ({ page }) => {
+        let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
+        let arrVideoArticles = await page.$$('article[class="video-box"]');
+        for (let i = 0; i < arrVideoArticles.length; i++)
+            await expect(atrialFibrillationVideoPage.videoArticle.nth(i)).toBeVisible();
+    })
 })
