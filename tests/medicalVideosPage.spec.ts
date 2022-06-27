@@ -5,13 +5,17 @@ import { Header } from '../pages/header.page';
 test.describe('medical videos page testing', () => {
     test.beforeEach(async ({ page }) => {
         let medicalVideosPage = new MedicalVideosPage(page);
+        test.setTimeout(60000);
         await medicalVideosPage.visit();
+        await page.waitForLoadState();
     })
 
     test('ALT-02 Verify the medical videos page', async ({ page }) => {
         let header = new Header(page);
         let medicalVideosPage = new MedicalVideosPage(page);
+        test.setTimeout(60000);
         await header.visit();
+        await page.waitForLoadState();
         await expect(header.discoverMedicalDrop).toBeVisible();
         await expect(header.medicalVideosLink).not.toBeVisible();
         await header.discoverMedicalDrop.click();
