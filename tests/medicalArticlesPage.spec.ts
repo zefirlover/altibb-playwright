@@ -5,7 +5,7 @@ import { MedicalArticlesPage } from "../../altibb-playwright/pages/MedicalArticl
 test.describe('medical articles page tests', () => {
     test.beforeEach(async ({ page }) => {
         let medicalArticlesPage = new MedicalArticlesPage(page);
-        test.setTimeout(1000000);
+        //test.setTimeout(1000000);
         await medicalArticlesPage.visit();
         await page.waitForLoadState();
     })

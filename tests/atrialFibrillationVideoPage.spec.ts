@@ -6,7 +6,7 @@ const arrMedias = [ 'facebook', 'linkedin', 'twitter', 'instagram', 'whatsapp' ]
 test.describe('atrial fibrillation video page testing', () => {
     test.beforeEach(async ({ page }) => {
         let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
-        test.setTimeout(1000000);
+        //test.setTimeout(1000000);
         await atrialFibrillationVideoPage.visit();
         await page.waitForLoadState();
     })
@@ -32,7 +32,7 @@ test.describe('atrial fibrillation video page testing', () => {
 
     test('ALT-05 Verify all share links works', async ({ page }) => {
         let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
-        test.setTimeout(300000);
+        //test.setTimeout(300000);
         for (let i = 0; i < arrMedias.length; i++) {
             let media = page.locator(`.video-container a[href*="${arrMedias[i]}"]`)
             await atrialFibrillationVideoPage.shareButton.click();

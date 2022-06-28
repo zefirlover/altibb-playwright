@@ -7,7 +7,7 @@ const arrMedias = [ 'facebook', 'linkedin', 'twitter', 'instagram', 'whatsapp' ]
 test.describe('happines article page tests', () => {
     test.beforeEach(async ({ page }) => {
         let happinesArticlePage = new HappinesArticlePage(page);
-        test.setTimeout(1000000);
+        //test.setTimeout(1000000);
         await happinesArticlePage.visit();
         await page.waitForLoadState();
     })
@@ -31,7 +31,7 @@ test.describe('happines article page tests', () => {
 
     test('ALT-13 Verify the share options', async ({ page }) => {
         let happinesArticlePage = new HappinesArticlePage(page);
-        test.setTimeout(200000);
+        //test.setTimeout(200000);
         for (let i = 0; i < arrMedias.length; i++) {
             let media = page.locator(`.news-article-container a[href*="${arrMedias[i]}"]`)
             await happinesArticlePage.shareButton.click();
@@ -50,7 +50,7 @@ test.describe('happines article page tests', () => {
 
     test('ALT-14 Verify Watch the answer page', async ({ page }) => {
         let happinesArticlePage = new HappinesArticlePage(page);
-        test.setTimeout(200000);
+        //test.setTimeout(200000);
         await expect(happinesArticlePage.watchTheAnswerLink).toBeVisible();
         await happinesArticlePage.watchTheAnswerLink.click();
         await expect(happinesArticlePage.likeButton).toBeVisible();

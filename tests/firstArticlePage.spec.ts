@@ -8,7 +8,7 @@ const arrMedias = [ 'facebook', 'linkedin', 'twitter', 'instagram', 'whatsapp' ]
 test.describe('first article page tests', () => {
     test.beforeEach(async ({ page }) => {
         let firstArticlePage = new FirstArticlePage(page);
-        test.setTimeout(1000000);
+        //test.setTimeout(1000000);
         await firstArticlePage.visit();
         await page.waitForLoadState();
     })
@@ -26,7 +26,7 @@ test.describe('first article page tests', () => {
 
     test('ALT-19 Verify all share links works', async ({ page }) => {
         let firstArticlePage = new FirstArticlePage(page);
-        test.setTimeout(2800000);
+        //test.setTimeout(2800000);
         for (let i = 0; i < arrMedias.length; i++) {
             let media = page.locator(`.article-container a[href*="${arrMedias[i]}"]`)
             await firstArticlePage.shareButton.click();

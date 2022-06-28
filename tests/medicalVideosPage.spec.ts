@@ -5,7 +5,7 @@ import { Header } from "../../altibb-playwright/pages/Header.page";
 test.describe('medical videos page testing', () => {
     test.beforeEach(async ({ page }) => {
         let medicalVideosPage = new MedicalVideosPage(page);
-        test.setTimeout(1000000);
+        //test.setTimeout(1000000);
         await medicalVideosPage.visit();
         await page.waitForLoadState();
     })
