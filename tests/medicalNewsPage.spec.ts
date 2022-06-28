@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { MedicalNewsPage } from "../pages/MedicalNews.page";
-import { Header } from "../pages/Header.page";
+import { MedicalNewsPage } from "../../altibb-playwright/pages/MedicalNews.page";
+import { Header } from "../../altibb-playwright/pages/Header.page";
 
 test.describe('med news test', () => {
     test('ALT-09 Verify Medical news page', async ({ page }) => {
