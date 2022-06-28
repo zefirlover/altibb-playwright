@@ -1,4 +1,3 @@
-import { Browser, BrowserContext, chromium } from '@playwright/test';
 import { test, expect } from '@playwright/test';
 import { MedicalVideosPage } from '../pages/medicalVideos.page';
 import { AtrialFibrillationVideoPage } from '../pages/AtrialFibrillationVideo.page';
