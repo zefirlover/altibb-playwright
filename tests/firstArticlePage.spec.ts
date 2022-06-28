@@ -16,6 +16,7 @@ test.describe('first article page tests', () => {
     test('ALT-18 Verify the first article page', async ({ page }) => {
         let firstArticlePage = new FirstArticlePage(page);
         let medicalArticlesPage = new MedicalArticlesPage(page);
+        test.setTimeout(100000);
         await medicalArticlesPage.visit();
         await page.waitForLoadState();
         await expect(medicalArticlesPage.firstArticleLink).toBeVisible();
@@ -25,7 +26,7 @@ test.describe('first article page tests', () => {
 
     test('ALT-19 Verify all share links works', async ({ page }) => {
         let firstArticlePage = new FirstArticlePage(page);
-        test.setTimeout(200000);
+        test.setTimeout(2800000);
         for (let i = 0; i < arrMedias.length; i++) {
             let media = page.locator(`.article-container a[href*="${arrMedias[i]}"]`)
             await firstArticlePage.shareButton.click();

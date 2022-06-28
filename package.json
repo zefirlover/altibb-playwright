@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "This is TypeScript Playwright automation tests created to test some functionality of the [altibb](https://telnyx.com/) website.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "allure:generate": "npx allure generate ./allure-results --clean",
+    "allure:open": "npx allure open ./allure-report",
+    "allure:serve": "npx allure serve",
+    "test": "npx playwright test",
+    "posttest": "npm run allure:generate"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zefirlover/altibb-playwright.git"
@@ -16,6 +22,8 @@
   },
   "homepage": "https://github.com/zefirlover/altibb-playwright#readme",
   "devDependencies": {
-    "@playwright/test": "^1.22.2"
+    "@playwright/test": "^1.22.2",
+    "allure-commandline": "^2.17.2",
+    "allure-playwright": "^2.0.0-beta.18"
   }
 }
