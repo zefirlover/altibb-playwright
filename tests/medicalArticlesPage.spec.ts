@@ -5,7 +5,7 @@ import { MedicalArticlesPage } from "../../altibb-playwright/pages/MedicalArticl
 test.describe('medical articles page tests', () => {
     test.beforeEach(async ({ page }) => {
         let medicalArticlesPage = new MedicalArticlesPage(page);
-        test.setTimeout(60000);
+        test.setTimeout(100000);
         await medicalArticlesPage.visit();
         await page.waitForLoadState();
     })
@@ -13,7 +13,7 @@ test.describe('medical articles page tests', () => {
     test('ALT-17 Verify the medical articles page', async ({ page }) => {
         let header = new Header(page);
         let medicalArticlesPage = new MedicalArticlesPage(page);
-        test.setTimeout(60000);
+        test.setTimeout(100000);
         await header.visit();
         await page.waitForLoadState();
         await expect(header.discoverMedicalDrop).toBeVisible();

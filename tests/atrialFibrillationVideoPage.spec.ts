@@ -6,7 +6,7 @@ const arrMedias = [ 'facebook', 'linkedin', 'twitter', 'instagram', 'whatsapp' ]
 test.describe('atrial fibrillation video page testing', () => {
     test.beforeEach(async ({ page }) => {
         let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
-        test.setTimeout(100000);
+        test.setTimeout(150000);
         await atrialFibrillationVideoPage.visit();
         await page.waitForLoadState();
     })
@@ -14,7 +14,7 @@ test.describe('atrial fibrillation video page testing', () => {
     test('ALT-03 Verify the atrial fibrillation video page', async ({ page }) => {
         let medicalVideosPage = new MedicalVideosPage(page);
         let atrialFibrillationVideoPage = new AtrialFibrillationVideoPage(page);
-        test.setTimeout(120000);
+        test.setTimeout(200000);
         await medicalVideosPage.visit();
         await page.waitForLoadState();
         await expect(medicalVideosPage.heartVideo).toBeVisible();
