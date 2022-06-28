@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { MedicalVideosPage } from '../pages/medicalVideos.page';
+import { MedicalVideosPage } from '../pages/MedicalVideos.page';
 import { AtrialFibrillationVideoPage } from '../pages/AtrialFibrillationVideo.page';
 const arrMedias = [ 'facebook', 'linkedin', 'twitter', 'instagram', 'whatsapp' ];
 

@@ -57,6 +57,7 @@ test.describe('happines article page tests', () => {
 
     test('ALT-15 Verify the Appointment page', async ({ page }) => {
         let happinesArticlePage = new HappinesArticlePage(page);
+        test.setTimeout(80000);
         await expect(happinesArticlePage.appointmentLink).toBeVisible();
         await happinesArticlePage.appointmentLink.click();
         await expect(happinesArticlePage.appointmentHeaderText).toBeVisible();

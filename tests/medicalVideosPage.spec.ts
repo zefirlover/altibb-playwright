@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { MedicalVideosPage } from '../pages/medicalVideos.page';
-import { Header } from '../pages/header.page';
+import { MedicalVideosPage } from '../pages/MedicalVideos.page';
+import { Header } from '../pages/Header.page';
 
 test.describe('medical videos page testing', () => {
     test.beforeEach(async ({ page }) => {
