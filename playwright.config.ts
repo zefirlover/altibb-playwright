@@ -14,7 +14,7 @@ const config: PlaywrightTestConfig = {
   reporter: 'html',
   use: {
     actionTimeout: 0,
-    trace: 'retain-on-failure',
+    trace: 'on',
   },
   projects: [
     {
