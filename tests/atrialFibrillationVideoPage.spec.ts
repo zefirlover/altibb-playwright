@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { MedicalVideosPage } from '../pages/MedicalVideos.page';
-import { AtrialFibrillationVideoPage } from '../pages/AtrialFibrillationVideo.page';
+import { MedicalVideosPage } from '../../altibb-playwright/pages/MedicalVideos.page';
+import { AtrialFibrillationVideoPage } from '../../altibb-playwright/pages/AtrialFibrillationVideo.page';
 const arrMedias = [ 'facebook', 'linkedin', 'twitter', 'instagram', 'whatsapp' ];
 
 test.describe('atrial fibrillation video page testing', () => {
