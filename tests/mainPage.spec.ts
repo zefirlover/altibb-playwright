@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { MainPage } from '../../altibb-playwright/pages/Main.page.js';
+import { MainPage } from '../../altibb-playwright/pages/Main.page';
 
 test.describe('main page testing', () => {
     test.beforeEach(async ({ page }) => {

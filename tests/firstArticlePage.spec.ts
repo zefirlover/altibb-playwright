@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { MedicalArticlesPage } from '../../altibb-playwright/pages/MedicalArticles.page.js';
-import { FirstArticlePage } from '../../altibb-playwright/pages/FirstArticle.page.js';
-import { HappinesArticlePage } from '../../altibb-playwright/pages/HappinesArticle.page.js';
-import { AtrialFibrillationVideoPage } from '../../altibb-playwright/pages/AtrialFibrillationVideo.page.js';
+import { MedicalArticlesPage } from '../../altibb-playwright/pages/MedicalArticles.page';
+import { FirstArticlePage } from '../../altibb-playwright/pages/FirstArticle.page';
+import { HappinesArticlePage } from '../../altibb-playwright/pages/HappinesArticle.page';
+import { AtrialFibrillationVideoPage } from '../../altibb-playwright/pages/AtrialFibrillationVideo.page';
 const arrMedias = [ 'facebook', 'linkedin', 'twitter', 'instagram', 'whatsapp' ];
 
 test.describe('first article page tests', () => {
