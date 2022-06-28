@@ -7,7 +7,7 @@ const arrMedias = [ 'facebook', 'linkedin', 'twitter', 'instagram', 'whatsapp' ]
 test.describe('happines article page tests', () => {
     test.beforeEach(async ({ page }) => {
         let happinesArticlePage = new HappinesArticlePage(page);
-        test.setTimeout(150000);
+        test.setTimeout(1000000);
         await happinesArticlePage.visit();
         await page.waitForLoadState();
     })
@@ -58,7 +58,7 @@ test.describe('happines article page tests', () => {
 
     test('ALT-15 Verify the Appointment page', async ({ page }) => {
         let happinesArticlePage = new HappinesArticlePage(page);
-        test.setTimeout(100000);
+        //test.setTimeout(100000);
         await expect(happinesArticlePage.appointmentLink).toBeVisible();
         await happinesArticlePage.appointmentLink.click();
         await expect(happinesArticlePage.appointmentHeaderText).toBeVisible();

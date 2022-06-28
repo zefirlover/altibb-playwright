@@ -5,7 +5,7 @@ import { Header } from "../../altibb-playwright/pages/Header.page";
 test.describe('medical videos page testing', () => {
     test.beforeEach(async ({ page }) => {
         let medicalVideosPage = new MedicalVideosPage(page);
-        test.setTimeout(100000);
+        test.setTimeout(1000000);
         await medicalVideosPage.visit();
         await page.waitForLoadState();
     })
@@ -13,7 +13,7 @@ test.describe('medical videos page testing', () => {
     test('ALT-02 Verify the medical videos page', async ({ page }) => {
         let header = new Header(page);
         let medicalVideosPage = new MedicalVideosPage(page);
-        test.setTimeout(100000);
+        //test.setTimeout(100000);
         await header.visit();
         await page.waitForLoadState();
         await expect(header.discoverMedicalDrop).toBeVisible();

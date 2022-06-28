@@ -8,7 +8,7 @@ const arrMedias = [ 'facebook', 'linkedin', 'twitter', 'instagram', 'whatsapp' ]
 test.describe('first article page tests', () => {
     test.beforeEach(async ({ page }) => {
         let firstArticlePage = new FirstArticlePage(page);
-        test.setTimeout(150000);
+        test.setTimeout(1000000);
         await firstArticlePage.visit();
         await page.waitForLoadState();
     })
@@ -16,7 +16,7 @@ test.describe('first article page tests', () => {
     test('ALT-18 Verify the first article page', async ({ page }) => {
         let firstArticlePage = new FirstArticlePage(page);
         let medicalArticlesPage = new MedicalArticlesPage(page);
-        test.setTimeout(200000);
+        //test.setTimeout(200000);
         await medicalArticlesPage.visit();
         await page.waitForLoadState();
         await expect(medicalArticlesPage.firstArticleLink).toBeVisible();
