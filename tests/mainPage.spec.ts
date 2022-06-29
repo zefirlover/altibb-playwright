@@ -9,6 +9,7 @@ test.describe('main page testing', () => {
 
     test('ALT-01 Verify the main page', async ({ page }) => {
         let mainPage = new MainPage(page);
+        await mainPage.callDocButton.scrollIntoViewIfNeeded();
         await expect(mainPage.callDocButton).toBeVisible();
     })
 })

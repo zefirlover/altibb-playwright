@@ -19,11 +19,13 @@ test.describe('happines article page tests', () => {
         await page.waitForLoadState();
         await expect(medicalNewsPage.happinesArticleLink).toBeVisible();
         await medicalNewsPage.happinesArticleLink.click();
+        await happinesArticlePage.talkToDocLink.scrollIntoViewIfNeeded();
         await expect(happinesArticlePage.talkToDocLink).toBeVisible(); 
     })
 
     test('ALT-12 Verify Talk to doctor page', async ({ page }) => {
         let happinesArticlePage = new HappinesArticlePage(page);
+        await happinesArticlePage.talkToDocLink.scrollIntoViewIfNeeded();
         await expect(happinesArticlePage.talkToDocLink).toBeVisible();
         await happinesArticlePage.talkToDocLink.click();
         await expect(happinesArticlePage.titleInput).toBeVisible();
