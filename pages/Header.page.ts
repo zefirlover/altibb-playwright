@@ -12,8 +12,8 @@ export class Header extends MainPage {
         super(page);
         this.page = page;
         this.discoverMedicalDrop = page.locator('.white-header *> a[data-toggle="dropdown"]');
-        this.medicalVideosLink = page.locator('.white-header *> a[href="/فيديوهات-طبية"]');
-        this.medicalNewsLink = page.locator('.white-header *> a[href="/اخبار-طبية"]');
-        this.medicalArticlesLink = page.locator('.white-header *> a[href="/مقالات-طبية"]')
+        this.medicalVideosLink = page.locator('//*[@class="white-header"]//img[@alt="video"]/../../a');
+        this.medicalNewsLink = page.locator(`//*[@class="white-header"]//img[@alt="news"]/../../a`);
+        this.medicalArticlesLink = page.locator(`//*[@class="white-header"]//img[@alt="article"]/../../a`)
     }
 }

@@ -21,9 +21,9 @@ export class AtrialFibrillationVideoPage {
         this.shareButton = page.locator('.video-container img[alt="Share"]');
         this.shareList = page.locator('.video-container #toggle-menu');
         this.facebookLink = page.locator('.video-container a[href*="facebook"]');
-        this.appointmentLink = page.locator('#daleel-appointment a[href="/الدليل-الطبي/حجوزات"]');
+        this.appointmentLink = page.locator('[class="ask-doctor-new-button "]');
         this.appointmentHeader = page.locator('h1[class="main-search-header"]');
-        this.viewAllQuestionsLink = page.locator('#free-q-and-a-classic-v2 a[href="/اسئلة-طبية/الامراض-المعدية"]');
+        this.viewAllQuestionsLink = page.locator('[class="show-all-questions-button"]');
         this.qnaHeader = page.locator('h1[class="page-title"]');
         this.newsArticle = page.locator('#suggested-articles-news .article-primary-container');
         this.newsContainer = page.locator('#suggested-articles-news');
@@ -32,6 +32,15 @@ export class AtrialFibrillationVideoPage {
     }
 
     async visit() {
-        await this.page.goto('https://automation.altibb.com//فيديوهات-طبية/الامراض-المعدية/الرجفان-الاذيني-القلب-560');
+        await this.page.goto('https://automation.altibb.com/%D9%81%D9%8A%D8%AF%D9%8A%D9%88%D9%87%D8%A7%D8%AA-%D8%B7%D8%A8%D9%8A%D8%A9/%D8%A7%D9%84%D8%A7%D9%85%D8%B1%D8%A7%D8%B6-%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%8A%D8%A9/%D8%A7%D9%84%D8%B1%D8%AC%D9%81%D8%A7%D9%86-%D8%A7%D9%84%D8%A7%D8%B0%D9%8A%D9%86%D9%8A-%D8%A7%D9%84%D9%82%D9%84%D8%A8-560');
+        await this.page.waitForLoadState();
+    }
+
+    async getAllElements(elementSelector){
+        return await this.page.$$(elementSelector);
+    }
+
+    async arrNewsArticles(){
+        return await this.getAllElements('#suggested-articles-news .article-primary-container');
     }
 }
